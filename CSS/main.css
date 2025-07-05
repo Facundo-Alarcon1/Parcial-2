@@ -1,0 +1,162 @@
+﻿/* Reset y estructura principal */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Muy importante para que el padding no altere el tamaño */
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+form {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+}
+
+main.container {
+    flex: 1 1 auto;
+}
+
+/* Header */
+.site-header {
+    background-color: #0d6efd;
+    color: white;
+}
+
+    .site-header h1 {
+        font-size: 1.8rem;
+    }
+
+/* Footer */
+.site-footer {
+    background-color: #212529;
+    color: white;
+    margin-top: auto;
+    width: 100%;
+    font-size: 1rem;
+    padding: 10px 0;
+}
+
+/* Panel general */
+.panel-general {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Inputs */
+.input-general {
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Botones */
+.btn-general {
+    margin-top: 5px;
+    margin-right: 5px;
+    padding: 8px 16px;
+    background-color: #198754;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    transition: background 0.2s;
+}
+
+    .btn-general:hover {
+        background-color: #157347;
+    }
+
+/* Grillas */
+.grid-general {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+    .grid-general th,
+    .grid-general td {
+        border: 1px solid #dee2e6;
+        padding: 8px;
+        text-align: center;
+    }
+
+    .grid-general th {
+        background-color: #0d6efd;
+        color: white;
+    }
+
+/* Hacer grillas responsive */
+.table-responsive {
+    overflow-x: auto;
+    width: 100%;
+}
+
+/* Home */
+.home-welcome {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Login */
+.login-container {
+    background-color: white;
+    padding: 30px;
+    margin: 40px auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    max-width: 400px;
+}
+
+/* Calendario */
+.calendario {
+    margin-bottom: 10px;
+}
+
+/* Media queries */
+@media (max-width: 991.98px) {
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .panel-general, .home-welcome, .login-container {
+        margin: 20px 0;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .panel-general, .home-welcome, .login-container {
+        padding: 10px;
+        margin: 10px 0;
+    }
+
+    .site-footer {
+        font-size: 0.9rem;
+    }
+
+    .grid-general th, .grid-general td {
+        font-size: 0.9rem;
+        padding: 6px;
+    }
+}
