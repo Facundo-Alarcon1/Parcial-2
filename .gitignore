@@ -361,3 +361,14 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+# Visual Studio Code
+.vscode/
+
+# Windows image file caches
+Thumbs.db
+Desktop.ini
+
+# Rider
+.idea/
+*.sln.iml
