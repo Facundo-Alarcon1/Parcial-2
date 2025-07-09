@@ -44,6 +44,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.SqlClient, Version=4.6.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Data.SqlClient.4.9.0\lib\net462\System.Data.SqlClient.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -91,11 +95,6 @@
     <Compile Include="View\Comprobantes.aspx.designer.cs">
       <DependentUpon>Comprobantes.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Controller\AutoController.cs" />
-    <Compile Include="Controller\ComprobanteController.cs" />
-    <Compile Include="Controller\LoginController.cs" />
-    <Compile Include="Controller\ServicioController.cs" />
-    <Compile Include="DataBase\DataBaseConnection.cs" />
     <Compile Include="View\Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -117,10 +116,6 @@
     <Compile Include="View\Logout.aspx.designer.cs">
       <DependentUpon>Logout.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Model\Auto.cs" />
-    <Compile Include="Model\Comprobante.cs" />
-    <Compile Include="Model\Empleados.cs" />
-    <Compile Include="Model\Servicio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="View\Servicios.aspx.cs">
       <DependentUpon>Servicios.aspx</DependentUpon>
@@ -138,6 +133,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <None Include="packages.config" />
     <None Include="View\packages.config" />
     <Content Include="Site1.Master" />
     <None Include="Web.Debug.config">
@@ -147,7 +143,20 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="Concesionario.Controller\Concesionario.Controller.csproj">
+      <Project>{31261d1e-5a7c-626c-454a-2bda87ebeeab}</Project>
+      <Name>Concesionario.Controller</Name>
+    </ProjectReference>
+    <ProjectReference Include="Concesionario.Database\Concesionario.Database.csproj">
+      <Project>{090b83ce-db6b-6fae-a1f7-e3f649e7fcd5}</Project>
+      <Name>Concesionario.Database</Name>
+    </ProjectReference>
+    <ProjectReference Include="Concesionario.Model\Concesionario.Model.csproj">
+      <Project>{20d39953-b33a-4f54-be9d-3e5536205f4e}</Project>
+      <Name>Concesionario.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

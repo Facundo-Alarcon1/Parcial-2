@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net472</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Concesionario.Model\Concesionario.Model.csproj" />
+    <ProjectReference Include="..\Concesionario.Database\Concesionario.Database.csproj" />
+  </ItemGroup>
+
+</Project>
