@@ -132,7 +132,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-    <None Include="View\packages.config" />
     <Content Include="Site1.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -165,8 +164,8 @@
   <!-- Target para copiar roslyn al bin -->
   <Target Name="CopyRoslyn" AfterTargets="Build">
     <ItemGroup>
-      <RoslynFiles Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\roslyn\**\*.*" />
-    </ItemGroup>
+  <RoslynFiles Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.4.1.0\tools\roslyn\**\*.*" />
+</ItemGroup>
     <Copy SourceFiles="@(RoslynFiles)" DestinationFolder="bin\roslyn\%(RecursiveDir)" SkipUnchangedFiles="true" />
   </Target>
   <ProjectExtensions>
